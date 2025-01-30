@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <h2>ATM Login</h2>
+        <form id="login-form">
+            <label for="account">Account Number:</label>
+            <input type="text" id="account" required>
+            <label for="pin">PIN:</label>
+            <input type="password" id="pin" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="atm-dashboard" style="display:none;">
+        <h2>ATM Dashboard</h2>
+        <div>
+            <button id="balance">Check Balance</button>
+            <button id="withdraw">Withdraw</button>
+            <button id="deposit">Deposit</button>
+            <button id="history">Transaction History</button>
+            <button id="pin-change">Change PIN</button>
+            <button id="logout">Logout</button>
+        </div>
+        <p id="display-balance" style="display:none;"></p>
+        <div id="withdraw-amount" style="display:none;">
+            <input type="number" id="withdraw-input" placeholder="Enter Amount" />
+            <button id="confirm-withdraw">Confirm Withdraw</button>
+        </div>
+        <div id="deposit-amount" style="display:none;">
+            <input type="number" id="deposit-input" placeholder="Enter Amount" />
+            <button id="confirm-deposit">Confirm Deposit</button>
+        </div>
+        <div id="transaction-history" style="display:none;">
+            <ul id="history-list"></ul>
+        </div>
+        <div id="pin-change-section" style="display:none;">
+            <input type="password" id="new-pin" placeholder="Enter New PIN" />
+            <button id="confirm-pin-change">Change PIN</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
